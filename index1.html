@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Rock, Paper, Scissors</title>
+	<style>
+		canvas {
+			width: 800px;
+			height: 600px;
+			border: 5px solid black;
+		}
+	</style>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<h1>Rock, Paper, Scissors</h1>
+	<p>First player uses A(ROCK), S(PAPER), D(SCISSORS)<br>
+		Last player uses J(rock), K(paper), L(scissors)</p>
+	<p id='playerOne'>Player1</p>
+	<p id='playerTwo'>Player2</p>
+	<script>
+		document.body.addEventListener('keydown', function(event) {
+			if (event.keyCode == 65) {
+				document.getElementById('playerOne').innerHTML = "ROCK"
+			}
+			else if (event.keyCode == 83) {
+				document.getElementById('playerOne').innerHTML = "PAPER"
+			}
+			else if (event.keyCode == 68) {
+				document.getElementById('playerOne').innerHTML = "SCISSORS"
+			}
+		});
+		document.body.addEventListener('keydown', function(event) {
+			if (event.keyCode == 74){
+				document.getElementById('playerTwo').innerHTML = "rock"
+			}
+			else if (event.keyCode == 75) {
+				document.getElementById('playerTwo').innerHTML = "paper"
+			}
+			else if (event.keyCode == 76) {
+				document.getElementById('playerTwo').innerHTML = "scissors"
+			}
+		});
+    </script>
+		
+	<canvas id="canvas"></canvas>
+</body>
+<script src="/static/game.js"></script>
+</html>
