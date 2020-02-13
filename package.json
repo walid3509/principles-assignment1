@@ -1,0 +1,18 @@
+{
+	"name":"rock,paper,scissors",
+	"version":"0.0.1",
+	"description":"This is a rock, paper, scissors game",
+	"main":"server.js",
+	"scripts":{
+		"start":"node server.js",
+		"test":"echo \"error\"",
+		"dev": "node server.js"
+	},
+	"repository": {
+		"type":"git",
+		"url":"git+              ",
+	},
+	"author": "Walid",
+	
+
+}
